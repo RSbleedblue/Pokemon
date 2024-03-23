@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel = "stylesheet" href="style.css">
+    <title>Pokemon Secret</title>
+</head>
+<body class="bg-teal-950">
+    <!-- Main Container -->
+    <div class="flex flex-col w-full items-center justify-center">
+        <!-- Nav Bar --> 
+        <div class="w-full p-10 flex gap-2 items-center bg-teal-900 h-10 shadow-2xl justify-center"> 
+            <div class="w-20 h-20">
+                <img src="assets/logo.png">
+            </div>
+            <p class="text-3xl text-teal-300 font-semibold">FUNKEMON</p>
+            <p class="text-3xl gradient-text font-semibold">|</p>
+            <div class="flex flex-col items-center">
+                <p class="text-sm text-teal-400">
+                    Created By
+                </p>
+                <p class="text-sm text-teal-400">
+                    Rivansh.
+                </p>
+            </div>
+        </div>
+        <!-- Hero Section -->
+        <div class="w-full  flex  items-center  gap-10 bg-teal-800 ">
+            <div class="w-[34%] ml-[10%]">
+                <img src="assets/pokLanding.png">
+            </div>
+            <div class="flex flex-col  gap-4">
+                <p class="text-[25px] w-[49%] text-teal-100 ">
+                    Discover Your Ultimate Pokémon Companion
+                    Unleash the Adventure 
+                    <span class="gradient-text">Gotta Catch 'Em All!</span>
+                </p>
+                <p class="text-gray-400 text-sm w-30" >
+                    Find Your  Favorite Pokémon and Get Ready.
+                </p>
+                <div class="flex w-full gap-3">
+                    <button class="border border-solid border-white p-4 w-[20%] text-xl rounded-full text-teal-100 bg-teal-900 hover:scale-105 hover:bg-teal-950 transition ease-in-out delay-10">Explore</button>
+                    
+                    <button class="border border-solid border-white p-4 w-[20%] text-xl rounded-full text-teal-100 bg-teal-900 hover:scale-105 hover:bg-teal-950 transition ease-in-out delay-10">Search</button>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Filter Search -->
+        <div class="gap-10 p-4 -mt-10 flex justify-between items-center rounded-lg" style="background-color: rgba(0, 255, 174, 0.1); backdrop-filter: blur(5px);">
+            <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" class="p-4 bg-teal-100 rounded-lg">
+                Types
+            </button>
+            <button class="p-4 bg-teal-100 rounded-lg">
+                Filter By Type
+            </button>
+            <input type="search" placeholder="Search by Name or Number.." class="text-white p-4 rounded-md shadow-xl bg-transparent">
+            <button class="p-4 bg-teal-100 rounded-lg shadow">
+                Reset
+            </button>
+        </div>
+    </div>
+</body>
+</html>
