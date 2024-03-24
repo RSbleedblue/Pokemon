@@ -49,7 +49,7 @@
             
         </div>
         <!-- Filter Search -->
-        <div class="gap-10 p-4 -mt-10 flex justify-between items-center rounded-lg" style="background-color: rgba(0, 255, 174, 0.1); backdrop-filter: blur(5px);">
+        <div class="gap-10 p-6 -mt-10  flex justify-between items-center rounded-full" style="background-color: rgba(0, 255, 174, 0.1); backdrop-filter: blur(5px);">
             <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" class="p-4 bg-teal-100 rounded-lg">
                 Types
             </button>
@@ -60,6 +60,28 @@
             <button class="p-4 bg-teal-100 rounded-lg shadow">
                 Reset
             </button>
+        </div>
+        <!-- Explore -->
+        <div class="w-full p-10 flex flex-col items-center">
+           <p class="gradient-text text-3xl font-semibold">Explore</p> 
+           <div class="w-[80%] flex flex-wrap justify-between p-3 gap-2">
+                  <!-- PokeMon Capsule -->
+                  <div class="flip-card capsule w-[20%] p-10 h-[300px] shadow-xl border border-solid border-teal-100 rounded-full flex flex-col items-center">
+                    <div class = "flip-card-inner">
+                        <div class="flip-card-front">        
+                            <div class="bg-teal-100 rounded-full shadow-xl" style="background-color: rgba(255,255,255,0.8);">
+                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="w-28">
+                            </div>
+                            <p class="text-2xl text-teal-100 mb-4">Pikachu</p>
+                            <p class="text-sm text-teal-900 bg-gray-200 rounded-full p-4">ELECTRIC</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p class="title">BACK</p>
+                            <p>Leave Me</p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
         </div>
     </div>
 </body>
