@@ -73,7 +73,6 @@ function displayResults(data){
     let html = '';
 
     data.forEach(element => {
-        // Front side HTML
         html += `
             <div class="flip-card w-[20%] hover:cursor-pointer h-[300px] rounded-full border border-solid border-teal-100 " style="background-color: rgba(0, 255, 174, 0.1);">
                 <div class="flip-card-inner">
