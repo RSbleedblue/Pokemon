@@ -48,41 +48,67 @@
             </div>
             
         </div>
-        <!-- Filter Search -->
-        <div class="gap-10 p-6 -mt-10  flex justify-between items-center rounded-full" style="background-color: rgba(0, 255, 174, 0.1); backdrop-filter: blur(5px);">
-            <button id="multiLevelDropdownButton" data-dropdown-toggle="multi-dropdown" class="p-4 bg-teal-100 rounded-lg">
+        <div class="gap-10 p-6 -mt-10 flex justify-between items-center rounded-full" style="background-color: rgba(0, 255, 174, 0.1); backdrop-filter: blur(5px);">
+            <button id="multiLevelDropdownButton" type="button" data-dropdown-toggle="dropdown" onclick="getMenu()" class="p-4 bg-teal-100 rounded-lg">
                 Types
             </button>
-            <button class="p-4 bg-teal-100 rounded-lg">
+            <button class="p-4 bg-teal-100 rounded-lg" onclick="getResultOnType()">
                 Filter By Type
             </button>
-            <input type="search" placeholder="Search by Name or Number.." class="text-white p-4 rounded-md shadow-xl bg-transparent">
-            <button class="p-4 bg-teal-100 rounded-lg shadow">
+            <input type="search" placeholder="Search by Name or Number.." id="searchPokemon" onkeyup="getPokemonDetail()" class="text-white p-4 rounded-md shadow-xl bg-transparent">
+            <button class="p-4 bg-teal-100 rounded-lg shadow" onclick="reset()">
                 Reset
             </button>
-        </div>
+            <!-- DropDown -->
+            <div class="flex flex-col w-[20%] mt-[42%] z-999 p-2 rounded-lg hidden" id="dropdownBox" style="background-color: rgba(0, 255, 174, 0.1); backdrop-filter: blur(5px);">
+                <ul class="w-full items-center">
+                    <li class="shadow-sm p-2 rounded-lg hover:bg-teal-300 hover:cursor-pointer text-teal-100 hover:text-black" onclick="selectType('Fire')">
+                        Fire
+                    </li>
+                    <li class="shadow-sm p-2 rounded-lg hover:bg-teal-300 hover:cursor-pointer text-teal-100 hover:text-black" onclick="selectType('Water')">
+                        Water
+                    </li>
+                    <li class="shadow-sm p-2 rounded-lg hover:bg-teal-300 hover:cursor-pointer text-teal-100 hover:text-black" onclick="selectType('Grass')">
+                        Grass
+                    </li>
+                    <li class="shadow-sm p-2 rounded-lg hover:bg-teal-300 hover:cursor-pointer text-teal-100 hover:text-black" onclick="selectType('Rock')">
+                        Rock
+                    </li>
+                    <li class="shadow-sm p-2 rounded-lg hover:bg-teal-300 hover:cursor-pointer text-teal-100 hover:text-black" onclick="selectType('Ice')">
+                        Ice
+                    </li>
+                </ul>
+            </div>
+            <!-- ------- -->
+        </div>        
         <!-- Explore -->
-        <div class="w-full p-10 flex flex-col items-center">
+        <div class="w-full p-10 flex flex-col items-center ">
            <p class="gradient-text text-3xl font-semibold">Explore</p> 
-           <div class="w-[80%] flex flex-wrap justify-between p-3 gap-2">
+           <div class="w-[80%] flex flex-wrap p-3 gap-10 justify-center shadow-sm  rounded-xl" id="pokemonCapsule">
                   <!-- PokeMon Capsule -->
-                  <div class="flip-card capsule w-[20%] p-10 h-[300px] shadow-xl border border-solid border-teal-100 rounded-full flex flex-col items-center">
-                    <div class = "flip-card-inner">
-                        <div class="flip-card-front">        
-                            <div class="bg-teal-100 rounded-full shadow-xl" style="background-color: rgba(255,255,255,0.8);">
+                <div class="flip-card w-[20%] hover:cursor-pointer h-[300px] rounded-full border border-solid border-teal-100 "style="background-color: rgba(0, 255, 174, 0.1); backdrop-filter: blur(5px);"  >
+                    <div class="flip-card-inner">
+                        <!-- Front -->
+                        <div class="flip-card-front flex flex-col items-center">
+                            <div class="rounded-full" >
                                 <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="w-28">
                             </div>
-                            <p class="text-2xl text-teal-100 mb-4">Pikachu</p>
-                            <p class="text-sm text-teal-900 bg-gray-200 rounded-full p-4">ELECTRIC</p>
+                            <p class="text-2xl text-teal-200 mb-4">Pikachu</p>
+                            <p class="text-sm text-teal-900 bg-teal-100 rounded-full p-4">ELECTRIC</p>
                         </div>
-                        <div class="flip-card-back">
-                            <p class="title">BACK</p>
-                            <p>Leave Me</p>
+                        <div class="flip-card-back flex flex-col items-center">
+                        <div>
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="w-28">
+                        </div>
+                        <p class="text-2xl text-teal-200 mb-4">Abilities</p>
+                        <p class="text-sm text-teal-900 bg-teal-100 rounded-full p-4">Dashed, Thunder Tail, Iron Rock</p>
                         </div>
                     </div>
-                  </div>
+                </div>  
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
+
 </body>
 </html>
